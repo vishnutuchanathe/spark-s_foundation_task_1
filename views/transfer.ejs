@@ -1,0 +1,33 @@
+<%- include("./partials/header") -%>
+<%if(status=="success"){%>
+<div class="alert alert-success">
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+<%}else if(status=="error"){%>
+<div class="alert alert-danger" role="alert">
+  <%=message%>
+</div>
+<%}%>
+<form class="row g-3" action="/transact" method="POST" >
+  <div class="mb-3">
+    <label for="from" class="form-label">From Account*</label>
+  <input type="text" class="form-control" id="from" name="from" value="<%=fromname%>" readonly>
+</div>
+<div class="mb-3">
+  <label for="to" class="form-label">To Account*</label>
+  <input class="form-control" list="datalistOptions" id="to" placeholder="Type to search..." name="to" required>
+  <datalist id="datalistOptions">
+    <%list.forEach(function(Item){%>
+    <option value="<%=Item.name%>">
+      <%});%>
+  </datalist>
+</div>
+<div class="mb-3">
+  <label for="amount" class="form-label">Amount*</label>
+  <input type="number" class="form-control" id="amount" name="amount" required>
+</div>
+<button type="submit" class="btn">Transfer</button>
+</form>
+
+
+<%- include("./partials/footer") -%>

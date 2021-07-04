@@ -1,0 +1,31 @@
+<%- include("./partials/header") -%>
+
+
+<table class="table table-success">
+  <tr class="table-success">
+    <th>Customer</th>
+    <th>Email</th>
+    <th>Balance</th>
+    <th>Transfer</th>
+  </tr>
+  <%try{newListItems.forEach(function(Item){%>
+  <tr>
+    <td><%=Item.name%></td>
+    <td><%=Item.email%></td>
+    <td><%=Item.balance%></td>
+    <td>
+      <form action="/transfer" method="POST">
+        <input type="hidden" name="id" value="<%=Item._id%>">
+        <input type="hidden" name="name" value="<%=Item.name%>">
+        <button type="submit" class="btn">Transfer</button>
+      </form>
+    </td>
+  </tr>
+  <%});}
+    catch(e){
+      console.log(e);
+    }%>
+
+</table>
+
+<%- include("./partials/footer") -%>

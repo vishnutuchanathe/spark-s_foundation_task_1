@@ -1,0 +1,19 @@
+<%- include("./partials/header") -%>
+<table class="table table-success">
+  <tr class="table-success">
+    <th>Sender</th>
+    <th>Reciever</th>
+    <th>Amount sent</th>
+  </tr>
+  <%try{newListItems.forEach(function(Item){%>
+  <tr>
+    <td><%=Item.from_name%></td>
+    <td><%=Item.to_name%></td>
+    <td><%=Item.amount%></td>
+  </tr>
+  <%});}
+    catch(e){
+      console.log(e);
+    }%>
+</table>
+<%- include("./partials/footer") -%>

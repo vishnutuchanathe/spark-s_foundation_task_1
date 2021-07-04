@@ -1,0 +1,72 @@
+
+body{
+  padding: 0 5%;
+}
+
+/* Navbar */
+#nav{
+  background-color: white;
+}
+ .navbar-brand,.navbar-text {
+    color: #4AA96C;
+
+}
+.navbar-brand:hover{
+  color: #9FE6A0;
+}
+.container-fluid{
+  padding: 2% 0;
+}
+.custom-toggler.navbar-toggler {
+border-color: #9FE6A0;
+}
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(144,238,144)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-brand{
+font-size: 2rem !important;
+font-weight: 600;
+}
+.nav-link{
+color: #9FE6A0;
+font-weight: 600;
+}
+.nav-link:hover{
+color: #4AA96C;
+}
+/* Navbar end */
+
+/* Loader */
+#loader {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+/* Loader end */
+
+/* Content */
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+.card-title{
+  color: #4AA96C
+}
+.card-text{
+  color: #3f3d55;
+}
+.card-body{
+  padding-left: 0px;
+}
+.btn{
+  background-color: #4AA96C;
+  color: white;
+}
+/* Content end */
+
+.alert{
+  padding-bottom: 20px;
+}
